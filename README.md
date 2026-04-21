@@ -1,51 +1,133 @@
-# Welcome to your Expo app 👋
+# 🌤️ WeatherApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A clean, minimal weather app built with **React Native** and **Expo**. Search any city and get real-time weather data — temperature, humidity, wind speed, and more. Your search history is saved locally between sessions.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Screenshots
 
-   ```bash
-   npm install
-   ```
+> Search screen with live weather data and history tab with recent searches.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Features
 
-In the output, you'll find options to open the app in a
+- 🔍 Search weather by city name
+- 🌡️ Real-time data: temperature, humidity, wind speed
+- 🕓 Search history saved locally (last 10 cities)
+- 🗑️ Clear history with confirmation dialog
+- 📱 Works on iOS and Android
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠️ Tech Stack
 
-## Get a fresh project
+| Technology | Purpose |
+|---|---|
+| React Native 0.81 | Mobile UI framework |
+| Expo SDK 54 | Development platform & build tools |
+| Expo Router | File-based navigation |
+| TypeScript | Type safety |
+| AsyncStorage | Local data persistence |
+| OpenWeatherMap API | Weather data |
 
-When you're ready, run:
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Expo Go app on your phone ([iOS](https://apps.apple.com/app/expo-go/id982107779) / [Android](https://play.google.com/store/apps/details?id=host.exp.exponent))
+- Free API key from [OpenWeatherMap](https://openweathermap.org/api)
+
+### Installation
 
 ```bash
-npm run reset-project
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/WeatherApp.git
+cd WeatherApp
+
+# Install dependencies
+npm install
+
+# Create environment file
+cp .env.example .env
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Environment Variables
 
-## Learn more
+Create a `.env` file in the root directory:
 
-To learn more about developing your project with Expo, look at the following resources:
+```env
+EXPO_PUBLIC_WEATHER_API_KEY=your_api_key_here
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+> ⚠️ Never commit your `.env` file. It's already in `.gitignore`.
 
-## Join the community
+### Run the app
 
-Join our community of developers creating universal apps.
+```bash
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# React-native-WeatherApp
+Then scan the QR code with **Expo Go** on your phone.
+
+---
+
+## 📁 Project Structure
+
+```
+WeatherApp/
+├── app/
+│   ├── _layout.tsx        # Tab navigation setup
+│   ├── index.tsx          # Search screen (entry point)
+│   └── history.tsx        # Search history screen
+├── components/
+│   └── SearchScreen.tsx   # Main weather search component
+├── .env                   # API key (not committed)
+├── .env.example           # Environment template
+└── app.json               # Expo config
+```
+
+---
+
+## 🔑 API
+
+This app uses the [OpenWeatherMap Current Weather API](https://openweathermap.org/current).
+
+```
+GET https://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}&units=metric
+```
+
+The free tier includes 60 calls/minute — more than enough for personal use.
+
+---
+
+## 📦 Key Dependencies
+
+```json
+{
+  "expo": "~54.0.33",
+  "expo-router": "~6.0.23",
+  "react-native": "0.81.5",
+  "@react-native-async-storage/async-storage": "latest"
+}
+```
+
+---
+
+## 🧠 What I Learned
+
+- Setting up React Native with Expo and file-based routing
+- Fetching and handling REST API responses with `async/await`
+- Managing multiple UI states: loading, error, success
+- Persisting data locally with `AsyncStorage`
+- TypeScript typing for API responses
+- Using `useFocusEffect` to refresh data on tab focus
+
+---
+
+## 📄 License
+
+MIT License — feel free to use this project as a learning reference.
