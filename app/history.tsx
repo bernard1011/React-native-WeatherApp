@@ -119,7 +119,7 @@ export default function HistoryScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f7f3ee",
+    backgroundColor: "#f0f6fb",
     paddingHorizontal: 24,
     paddingTop: 70,
   },
@@ -141,13 +141,13 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   clearButton: {
-    backgroundColor: "#fff0ec",
+    backgroundColor: "#eaf4fb",
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 20,
   },
   clearText: {
-    color: "#e67e22",
+    color: "#2980b9",
     fontWeight: "600",
     fontSize: 13,
   },
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
   },
   itemFirst: {
     borderWidth: 1.5,
-    borderColor: "#e67e22",
+    borderColor: "#2980b9",
   },
   itemEmoji: {
     fontSize: 32,
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   itemTemp: {
     fontSize: 22,
     fontWeight: "800",
-    color: "#e67e22",
+    color: "#2980b9",
     letterSpacing: -0.5,
   },
   empty: {

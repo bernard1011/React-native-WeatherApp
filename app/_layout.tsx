@@ -5,7 +5,7 @@ const RootLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#e67e22",
+        tabBarActiveTintColor: "#65adc8",
         tabBarInactiveTintColor: "#999",
         headerShown: false,
         tabBarStyle: {

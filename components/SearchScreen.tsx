@@ -118,7 +118,7 @@ const SearchScreen = () => {
       </View>
 
       {loading && (
-        <ActivityIndicator size="large" color="#e67e22" style={{ marginTop: 40 }} />
+        <ActivityIndicator size="large" color="#2980b9" style={{ marginTop: 40 }} />
       )}
 
       {error ? (
@@ -159,7 +159,7 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f7f3ee",
+    backgroundColor: "#f0f6fb",
     paddingHorizontal: 24,
     paddingTop: 70,
   },
@@ -195,12 +195,12 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   button: {
-    backgroundColor: "#e67e22",
+    backgroundColor: "#2980b9",
     borderRadius: 16,
     width: 52,
     alignItems: "center",
     justifyContent: "center",
-    shadowColor: "#e67e22",
+    shadowColor: "#2980b9",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
   temp: {
     fontSize: 72,
     fontWeight: "800",
-    color: "#e67e22",
+    color: "#2980b9",
     letterSpacing: -2,
     lineHeight: 80,
   },
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   errorBox: {
-    backgroundColor: "#fff0f0",
+    backgroundColor: "#f0f6fb",
     borderRadius: 12,
     padding: 14,
     marginBottom: 16,
